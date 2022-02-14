@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     Rigidbody rb;
     
     [SerializeField] float mainThrust = 1f;
-    //[SerializeField] float rocketRotation = 25f;
+    [SerializeField] float rocketRotation = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         ProcessThurst();
+        ProcessRotate();
     }
 
     void ProcessThurst()
@@ -27,5 +28,25 @@ public class Movement : MonoBehaviour
         {
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
         }
+    }
+
+    void ProcessRotate()
+    {
+        if(Input.GetKey(KeyCode.A))
+        {
+            ApplyRotation(rocketRotation);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            ApplyRotation(-rocketRotation);
+        }
+        
+    }
+
+    void ApplyRotation(float thisRocketRotate)
+    {
+        rb.freezeRotation = true;
+        transform.Rotate(Vector3.forward * thisRocketRotate * Time.deltaTime);
+        rb.freezeRotation = false;
     }
 }
