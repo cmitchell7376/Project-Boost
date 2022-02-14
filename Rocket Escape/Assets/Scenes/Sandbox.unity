@@ -301,6 +301,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1677851057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2546829919035126586, guid: 2a8fee89c4d27344bbfc5a09927bf576, type: 3}
+  m_PrefabInstance: {fileID: 1530487417180056864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1677851058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677851057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c2252863e5ac5418c64671544e0303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainThrust: 1000
 --- !u!1001 &304651433780200753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -411,7 +429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663543423289221945, guid: 87e8b96a94dc0b44aab4594d613c0c26, type: 3}
       propertyPath: m_Name
-      value: ' Start Pad'
+      value: Start Pad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87e8b96a94dc0b44aab4594d613c0c26, type: 3}
@@ -425,6 +443,10 @@ PrefabInstance:
     - target: {fileID: 2546829919035126586, guid: 2a8fee89c4d27344bbfc5a09927bf576, type: 3}
       propertyPath: m_Name
       value: Rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220616343483324756, guid: 2a8fee89c4d27344bbfc5a09927bf576, type: 3}
+      propertyPath: m_Drag
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7607391899326584609, guid: 2a8fee89c4d27344bbfc5a09927bf576, type: 3}
       propertyPath: m_RootOrder
@@ -481,7 +503,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2388266690634039515, guid: c0d2916919edcd54085de04c20ce189e, type: 3}
       propertyPath: m_Name
-      value: ' End Pad '
+      value: 'End Pad '
       objectReference: {fileID: 0}
     - target: {fileID: 6041025350909481348, guid: c0d2916919edcd54085de04c20ce189e, type: 3}
       propertyPath: m_RootOrder
