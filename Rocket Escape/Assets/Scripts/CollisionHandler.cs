@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -16,8 +17,13 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("You have collected fuel.");
                 break;
             default:
-                Debug.Log("Take Damage");
+                ReloadLevel();
                 break;
         }
+    }
+
+    void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
